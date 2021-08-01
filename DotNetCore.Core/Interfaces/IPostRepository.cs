@@ -7,6 +7,7 @@ namespace DotNetCore.Core.Interfaces
     public interface IPostRepository
     {
         Task<IEnumerable<Post>> GetPost();
-        Task<IEnumerable<Employees>> GetEmployee();
+        Task<IEnumerable<User>> GetEmployee();
+        Task AddPost(Post post);
     }
 }
