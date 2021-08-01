@@ -15,11 +15,15 @@ namespace DotNetCore.Infrastructure.Data
         {
         }
 
-        public virtual DbSet<Employees> Employees { get; set; }
+        public virtual DbSet<Comment> Comment { get; set; }
+        public virtual DbSet<Post> Post { get; set; }
+        public virtual DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+            modelBuilder.ApplyConfiguration(new PostConfiguration());
+            modelBuilder.ApplyConfiguration(new CommentConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
         }
     }
 }
