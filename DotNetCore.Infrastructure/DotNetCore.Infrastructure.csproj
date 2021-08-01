@@ -20,4 +20,7 @@
     <ProjectReference Include="..\DotNetCore.Core\DotNetCore.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+  </ItemGroup>
 </Project>
